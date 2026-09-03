@@ -98,4 +98,3 @@ git push -u origin main
 ```
 
 接著在 GitHub 設定 Pages 即可。
->>>>>>> 105241a (Initial website commit)
