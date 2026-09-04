@@ -79,6 +79,8 @@ git push origin main
 - 修改版型與顏色請更新 `styles.css`
 - 增加互動請更新 `script.js`
 - 更換圖片請更新 `assets/` 內檔案
+- 選單各項內容請編輯 `pages.html` 對應的 `<section id="...">`
+- `pages.html` 的網址格式是 `pages.html#內容代號`
 
 ## 注意事項
 

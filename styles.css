@@ -259,6 +259,24 @@ dd { margin:0; color:var(--navy); font-weight:700; }
 .contact-section .map-heading { padding:18px 23px; }
 @media (max-width:620px) { .contact-section dl { grid-template-columns:1fr; } .contact-section dl div:first-child { grid-column:auto; } .contact-section .contact-box { min-height:380px; } .contact-section .contact-box iframe { height:290px; } }
 
+.page-header { min-height:100px; display:flex; align-items:center; justify-content:space-between; }
+.back-home { color:var(--orange); font-weight:700; font-size:.88rem; }
+.page-main { padding:42px 0 80px; }
+.page-intro { padding:25px 0 30px; border-bottom:2px solid var(--navy); margin-bottom:30px; }
+.page-intro h1 { color:var(--navy); font-size:2.4rem; margin:0 0 8px; }
+.page-intro>p:last-child { color:var(--muted); margin:0; }
+.editable-section { max-width:850px; padding:35px 0; border-bottom:1px solid var(--line); scroll-margin-top:115px; }
+.editable-section h2 { color:var(--navy); font-size:1.7rem; margin:0 0 12px; }
+.editable-section h3 { color:var(--navy); font-size:1.15rem; }
+.editable-section p { color:var(--muted); }
+.editable-section:target { border-left:4px solid var(--orange); padding-left:20px; background:var(--cream); }
+.edit-index { display:flex; flex-wrap:wrap; gap:8px; margin-top:22px; }
+.edit-index a { padding:6px 12px; border:1px solid var(--line); color:var(--navy); background:#fff; font-size:.82rem; }
+.edit-index a:hover { border-color:var(--orange); color:var(--orange); }
+.editable-page .brand img { width:180px; height:70px; object-fit:contain; }
+.editable-page .footer-inner { grid-template-columns:1fr auto; }
+@media (max-width:620px) { .page-header { min-height:76px; } .editable-page .brand img { width:160px; height:60px; } .page-main { padding-top:25px; } .page-intro h1 { font-size:1.8rem; } }
+
 @media (max-width:620px) {
 	body { background:#f7f5f0; }
 	.utility-bar { display:none; }

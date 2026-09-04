@@ -6,6 +6,54 @@ if (yearEl) {
 const navToggle = document.querySelector('.nav-toggle');
 const mainNav = document.querySelector('.main-nav');
 
+const pageRoutes = {
+  '關於今元由': 'company-intro',
+  '公司簡介': 'company-intro',
+  '公司沿革': 'company-history',
+  '經營理念': 'business-philosophy',
+  '公司組織': 'organization',
+  '專業瓦斯安全服務': 'gas-safety',
+  '公司位置': 'company-location',
+  '營業與服務項目': 'gas-sales',
+  '液化石油氣、丙烷瓦斯銷售': 'gas-sales',
+  '液化石油氣、丙烷瓦斯分裝': 'gas-filling',
+  '家庭用、工業用瓦斯配送': 'gas-delivery',
+  '工業用瓦斯配管': 'gas-piping',
+  '瓦斯儲槽規劃及施工': 'gas-tank',
+  '鋼瓶銷售與驗瓶': 'gas-bottle',
+  '瓦斯設備與安全諮詢': 'gas-equipment',
+  '新聞中心': 'company-news',
+  '公司最新消息': 'company-news',
+  '瓦斯產業資訊': 'industry-news',
+  '安全宣導資訊': 'safety-news',
+  '客戶服務與支援': 'lpg-knowledge',
+  '認識液化石油氣': 'lpg-knowledge',
+  '丙烷與丁烷特性': 'gas-properties',
+  '瓦斯流量表換算係數': 'flow-rate',
+  '液化石油氣批售價格': 'lpg-price',
+  '液化石油氣使用安全須知': 'gas-safety',
+  '液化石油氣安全資料表（SDS）': 'lpg-sds',
+  '瓦斯常見問與答（Q&A）': 'gas-qa',
+  '人才招募': 'benefits',
+  '薪資與福利': 'benefits',
+  '最新職缺': 'jobs',
+  '關係企業': 'partners',
+  '今元由關係企業': 'partners',
+  '合作夥伴': 'cooperation',
+  '聯絡我們': 'contact-info',
+  'LPG牌價': 'lpg-price'
+};
+
+if (mainNav) {
+  mainNav.querySelectorAll('a').forEach((link) => {
+    const label = link.textContent.replace('⌄', '').trim();
+    if (pageRoutes[label]) {
+      const route = pageRoutes[label];
+      link.href = route.includes('#') ? route : `pages.html#${route}`;
+    }
+  });
+}
+
 if (navToggle && mainNav) {
   navToggle.addEventListener('click', () => {
     const isOpen = mainNav.classList.toggle('open');
