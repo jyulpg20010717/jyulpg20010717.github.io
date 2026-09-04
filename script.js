@@ -58,12 +58,12 @@ if (contactForm) {
       </div>
       <iframe
         title="今元由實業股份有限公司 Google 地圖位置"
-        src="https://www.google.com/maps?q=%E8%87%BA%E4%B8%AD%E5%B8%82%E6%B2%99%E9%B9%BF%E5%8D%80%E4%B8%AD%E5%B1%B1%E8%B7%AF24%E8%99%9F%E4%B9%8B30&output=embed"
+        src="https://www.google.com/maps?q=24.2460235,120.5862587&z=16&output=embed"
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
         allowfullscreen>
       </iframe>
-      <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E6%B2%99%E9%B9%BF%E5%8D%80%E4%B8%AD%E5%B1%B1%E8%B7%AF24%E8%99%9F%E4%B9%8B30" target="_blank" rel="noopener">在 Google 地圖中開啟　→</a>`;
+      <a class="map-link" href="https://www.google.com/maps/place/%E4%BB%8A%E5%85%83%E7%94%B1%E5%AF%A6%E6%A5%AD%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/@24.2460235,120.5836838,16z/data=!3m1!4b1!4m6!3m5!1s0x346914fc8114eaa7:0x9eed2725e8ad8713!8m2!3d24.2460235!4d120.5862587!16s%2Fg%2F1pzpv_l6b?entry=ttu&amp;g_ep=EgoyMDI2MDkwMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">在 Google 地圖中開啟　→</a>`;
   }
 
 }
