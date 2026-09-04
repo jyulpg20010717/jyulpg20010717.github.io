@@ -14,6 +14,9 @@ if (navToggle && mainNav) {
 
   mainNav.querySelectorAll('a').forEach((link) => {
     link.addEventListener('click', () => {
+      if (window.innerWidth <= 900 && link.parentElement.classList.contains('nav-group')) {
+        return;
+      }
       mainNav.classList.remove('open');
       navToggle.setAttribute('aria-expanded', 'false');
     });
