@@ -265,6 +265,9 @@ dd { margin:0; color:var(--navy); font-weight:700; }
 .page-intro { padding:25px 0 30px; border-bottom:2px solid var(--navy); margin-bottom:30px; }
 .page-intro h1 { color:var(--navy); font-size:2.4rem; margin:0 0 8px; }
 .page-intro>p:last-child { color:var(--muted); margin:0; }
+.all-content-link { display:inline-block; margin-top:16px; color:var(--orange); font-size:.86rem; font-weight:700; }
+.menu-category[hidden],.editable-section[hidden] { display:none; }
+.selected-edit-section { border-left:4px solid var(--orange); padding-left:22px; background:var(--cream); }
 .editable-section { max-width:850px; padding:35px 0; border-bottom:1px solid var(--line); scroll-margin-top:115px; }
 .editable-section h2 { color:var(--navy); font-size:1.7rem; margin:0 0 12px; }
 .editable-section h3 { color:var(--navy); font-size:1.15rem; }

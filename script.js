@@ -95,6 +95,21 @@ const observer = new IntersectionObserver(
 
 revealItems.forEach((item) => observer.observe(item));
 
+const editablePage = document.querySelector('.editable-page');
+const selectedSectionId = window.location.hash.slice(1);
+if (editablePage && selectedSectionId) {
+  const selectedSection = document.getElementById(selectedSectionId);
+  if (selectedSection && selectedSection.classList.contains('editable-section')) {
+    document.querySelectorAll('.menu-category').forEach((category) => {
+      category.hidden = !category.contains(selectedSection);
+    });
+    document.querySelectorAll('.editable-section').forEach((section) => {
+      section.hidden = section !== selectedSection;
+    });
+    selectedSection.classList.add('selected-edit-section');
+  }
+}
+
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
   const contactBox = contactForm.closest('.contact-box');
