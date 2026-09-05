@@ -8,6 +8,12 @@ const mainNav = document.querySelector('.main-nav');
 const oldSiteUrl = 'https://jyulpg20010717.github.io/';
 const currentSiteUrl = 'https://www.jyulpg.com.tw/';
 
+const heroImage = document.querySelector('.hero-slides > img');
+if (heroImage) {
+  heroImage.src = 'assets/company-building.jpg';
+  heroImage.alt = '今元由實業股份有限公司廠區與瓦斯服務場址';
+}
+
 const partnerSection = document.querySelector('#partners.simple-section');
 if (partnerSection) {
   partnerSection.innerHTML = `
