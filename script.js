@@ -74,7 +74,16 @@ if (navToggle && mainNav) {
     link.addEventListener('click', (event) => {
       if (window.innerWidth <= 900) {
         event.preventDefault();
-        link.parentElement.classList.toggle('expanded');
+        const group = link.parentElement;
+        const isExpanded = group.classList.contains('expanded');
+
+        mainNav.querySelectorAll('.nav-group.expanded').forEach((expandedGroup) => {
+          expandedGroup.classList.remove('expanded');
+        });
+
+        if (!isExpanded) {
+          group.classList.add('expanded');
+        }
       }
     });
   });
