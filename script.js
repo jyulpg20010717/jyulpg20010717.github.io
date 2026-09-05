@@ -7,6 +7,13 @@ const navToggle = document.querySelector('.nav-toggle');
 const mainNav = document.querySelector('.main-nav');
 const oldSiteUrl = 'https://jyulpg20010717.github.io/';
 const currentSiteUrl = 'https://www.jyulpg.com.tw/';
+const companyAddress = '433臺中市沙鹿區犁分里中山路24-30號';
+
+document.querySelectorAll('body *').forEach((element) => {
+  if (element.children.length === 0 && element.textContent.includes('臺中市沙鹿區中山路24號之30')) {
+    element.textContent = element.textContent.replace('臺中市沙鹿區中山路24號之30', companyAddress);
+  }
+});
 
 const heroImage = document.querySelector('.hero-slides > img');
 if (heroImage) {
