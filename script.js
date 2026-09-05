@@ -8,6 +8,28 @@ const mainNav = document.querySelector('.main-nav');
 const oldSiteUrl = 'https://jyulpg20010717.github.io/';
 const currentSiteUrl = 'https://www.jyulpg.com.tw/';
 
+const partnerSection = document.querySelector('#partners.simple-section');
+if (partnerSection) {
+  partnerSection.innerHTML = `
+    <div class="container">
+      <p class="kicker">PARTNERS</p>
+      <h2>今元由旗下系統與相關企業</h2>
+      <p>今元由實業股份有限公司旗下系統涵蓋瓦斯、液化石油氣、驗瓶場、分裝場及相關安裝維修服務單位。</p>
+      <div class="affiliate-list">
+        <span>華利興企業有限公司</span>
+        <span>上由煤氣行</span>
+        <span>豐台煤氣有限公司</span>
+        <span>紅刺菖煤氣有限公司</span>
+        <span>安田瓦斯行</span>
+        <span>大山城煤氣行</span>
+        <span>建光煤行</span>
+        <span>龍門谷商行</span>
+        <span>雙園企業有限公司</span>
+      </div>
+      <a class="text-link" href="pages.html#partners">查看今元由相關企業　→</a>
+    </div>`;
+}
+
 document.querySelectorAll(`a[href^="${oldSiteUrl}"]`).forEach((link) => {
   link.href = link.href.replace(oldSiteUrl, currentSiteUrl);
 });
