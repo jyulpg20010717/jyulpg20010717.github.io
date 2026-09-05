@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://jyulpg20010717.github.io/sitemap.xml
+Sitemap: https://www.jyulpg.com.tw/sitemap.xml

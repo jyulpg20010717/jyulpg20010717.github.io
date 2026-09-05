@@ -5,6 +5,12 @@ if (yearEl) {
 
 const navToggle = document.querySelector('.nav-toggle');
 const mainNav = document.querySelector('.main-nav');
+const oldSiteUrl = 'https://jyulpg20010717.github.io/';
+const currentSiteUrl = 'https://www.jyulpg.com.tw/';
+
+document.querySelectorAll(`a[href^="${oldSiteUrl}"]`).forEach((link) => {
+  link.href = link.href.replace(oldSiteUrl, currentSiteUrl);
+});
 
 const pageRoutes = {
   '關於今元由': 'company-intro',
