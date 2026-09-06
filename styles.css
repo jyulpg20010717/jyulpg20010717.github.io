@@ -347,11 +347,9 @@ dd { margin:0; color:var(--navy); font-weight:700; }
 @media (max-width:620px) {
 	.affiliate-list { grid-template-columns:1fr; gap:8px; }
 	.feature-grid,
-	.service-grid { display:flex; direction:rtl; overflow-x:auto; overscroll-behavior-x:contain; scroll-snap-type:x mandatory; scrollbar-width:none; gap:12px; padding:0 14px 10px; }
-	.feature-grid::-webkit-scrollbar,
-	.service-grid::-webkit-scrollbar { display:none; }
+	.service-grid { display:flex; direction:ltr; overflow:hidden; scroll-snap-type:x mandatory; gap:0; padding:0; }
 	.feature-grid>a,
-	.service-grid article { direction:ltr; flex:0 0 86%; min-width:0; scroll-snap-align:start; }
+	.service-grid article { direction:ltr; flex:0 0 100%; min-width:0; scroll-snap-align:start; }
 	.feature-grid>a { min-height:120px; border:1px solid var(--line); }
 	.service-grid article>img { height:155px; }
 }
