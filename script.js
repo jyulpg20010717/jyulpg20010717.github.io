@@ -43,10 +43,9 @@ if (partnerSection) {
     </div>`;
 }
 
-const setupMobileCarousel = (selector) => {
+const setupCarousel = (selector) => {
   const carousel = document.querySelector(selector);
   const items = carousel ? Array.from(carousel.children) : [];
-  const mobileQuery = window.matchMedia('(max-width: 620px)');
   const dots = document.createElement('div');
   let currentIndex = 0;
   let timerId = null;
@@ -85,9 +84,6 @@ const setupMobileCarousel = (selector) => {
 
   const start = () => {
     stop();
-    if (!mobileQuery.matches) {
-      return;
-    }
     timerId = window.setInterval(() => {
       currentIndex = (currentIndex + 1) % items.length;
       carousel.scrollTo({
@@ -98,13 +94,12 @@ const setupMobileCarousel = (selector) => {
     }, 4000);
   };
 
-  mobileQuery.addEventListener('change', start);
   updateDots();
   start();
 };
 
-setupMobileCarousel('.feature-grid');
-setupMobileCarousel('.service-grid');
+setupCarousel('.feature-grid');
+setupCarousel('.service-grid');
 
 document.querySelectorAll(`a[href^="${oldSiteUrl}"]`).forEach((link) => {
   link.href = link.href.replace(oldSiteUrl, currentSiteUrl);
