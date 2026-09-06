@@ -47,12 +47,34 @@ const setupMobileCarousel = (selector) => {
   const carousel = document.querySelector(selector);
   const items = carousel ? Array.from(carousel.children) : [];
   const mobileQuery = window.matchMedia('(max-width: 620px)');
+  const dots = document.createElement('div');
   let currentIndex = 0;
   let timerId = null;
 
   if (!carousel || items.length < 2) {
     return;
   }
+
+  dots.className = 'carousel-dots';
+  items.forEach((_, index) => {
+    const dot = document.createElement('button');
+    dot.type = 'button';
+    dot.className = 'carousel-dot';
+    dot.setAttribute('aria-label', `顯示第 ${index + 1} 項`);
+    dot.addEventListener('click', () => {
+      currentIndex = index;
+      carousel.scrollTo({ left: currentIndex * carousel.clientWidth, behavior: 'smooth' });
+      updateDots();
+    });
+    dots.appendChild(dot);
+  });
+  carousel.insertAdjacentElement('afterend', dots);
+
+  const updateDots = () => {
+    dots.querySelectorAll('.carousel-dot').forEach((dot, index) => {
+      dot.classList.toggle('active', index === currentIndex);
+    });
+  };
 
   const stop = () => {
     if (timerId) {
@@ -72,10 +94,12 @@ const setupMobileCarousel = (selector) => {
         left: currentIndex * carousel.clientWidth,
         behavior: 'smooth'
       });
+      updateDots();
     }, 4000);
   };
 
   mobileQuery.addEventListener('change', start);
+  updateDots();
   start();
 };
 
